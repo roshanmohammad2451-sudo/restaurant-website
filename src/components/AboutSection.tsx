@@ -43,11 +43,10 @@ export default function AboutSection() {
                 every bite tells a story of tradition and passion.
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-10">
+            <div className="grid grid-cols-2 gap-6 mt-10">
               {[
                 { num: "50+", label: "Dishes" },
-                { num: "15K+", label: "Happy Guests" },
-                { num: "4.6", label: "Rating" },
+                { num: "4.4", label: "Rating" },
               ].map((s) => (
                 <div key={s.label}>
                   <p className="font-display text-2xl md:text-3xl font-bold text-gold tabular-nums">{s.num}</p>
