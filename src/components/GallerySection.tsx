@@ -4,15 +4,17 @@ import food2 from "@/assets/food-2.jpg";
 import food3 from "@/assets/food-3.jpg";
 import food4 from "@/assets/food-4.jpg";
 import food5 from "@/assets/food-5.jpg";
-import aboutBg from "@/assets/about-bg.jpg";
+import exterior from "@/assets/zamindari-exterior.png";
+import seating from "@/assets/zamindari-seating.png";
 
 const images = [
-  { src: food1, alt: "Bruschetta appetizer", span: "" },
-  { src: food2, alt: "Grilled steak", span: "md:row-span-2" },
-  { src: food3, alt: "Chocolate dessert", span: "" },
-  { src: food4, alt: "Craft cocktail", span: "" },
-  { src: food5, alt: "Seafood pasta", span: "" },
-  { src: aboutBg, alt: "Restaurant interior", span: "md:col-span-2" },
+  { src: food1, alt: "Talwar Chicken Kebab", span: "" },
+  { src: food2, alt: "Mutton Nalli Biryani", span: "md:row-span-2" },
+  { src: food3, alt: "Andhra Fish Fry", span: "" },
+  { src: food4, alt: "Apricot Delight dessert", span: "" },
+  { src: food5, alt: "Seeti Goli Soda", span: "" },
+  { src: exterior, alt: "Zamindari Restaurant entrance", span: "md:col-span-2" },
+  { src: seating, alt: "Zamindari outdoor seating", span: "" },
 ];
 
 export default function GallerySection() {

@@ -3,19 +3,19 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const reviews = [
   {
-    name: "Margaret Thornton",
+    name: "Rajesh Kumar",
     rating: 5,
-    text: "An extraordinary evening from start to finish. The wagyu was the best I've had outside of Tokyo. The ambience made it truly magical.",
+    text: "The Mutton Nalli Biryani is absolutely divine — the bone marrow pieces melt in your mouth. The ambience takes you back to the Zamindari era. A must-visit in Vizag!",
   },
   {
-    name: "David Reyes",
+    name: "Priya Reddy",
     rating: 5,
-    text: "We celebrated our anniversary here and couldn't have chosen better. Impeccable service, creative cocktails, and that chocolate fondant haunts me still.",
+    text: "We celebrated my daughter's birthday here. The Talwar Chicken Kebab was the star of the evening! Great family-friendly atmosphere and attentive service.",
   },
   {
-    name: "Amara Okafor",
+    name: "Venkat Rao",
     rating: 4,
-    text: "The seafood pasta was divine. Lovely, intimate setting — feels like a hidden gem. Will definitely be coming back with friends.",
+    text: "Authentic Andhra flavors that remind me of home cooking. The Gongura Kodi Kura and Bagara Rice combo is perfection. Will definitely bring my friends next time.",
   },
 ];
 

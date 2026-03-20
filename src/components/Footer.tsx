@@ -1,3 +1,5 @@
+import logo from "@/assets/zamindari-logo.png";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-secondary/20 py-16">
@@ -5,9 +7,9 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-2xl font-bold gold-text mb-4">Royal Bites</h3>
+            <img src={logo} alt="Zamindari Restaurant" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Crafting unforgettable dining experiences in the heart of London since 2018.
+              Serving authentic Andhra cuisine with bold spices and royal hospitality in the heart of Visakhapatnam.
             </p>
             <div className="flex gap-4 mt-6">
               {["Instagram", "Facebook", "Twitter"].map((s) => (
@@ -27,9 +29,9 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-lg font-semibold text-foreground mb-4">Opening Hours</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex justify-between"><span>Monday – Friday</span><span className="text-foreground/80">12:00 – 23:00</span></div>
-              <div className="flex justify-between"><span>Saturday</span><span className="text-foreground/80">11:00 – 00:00</span></div>
-              <div className="flex justify-between"><span>Sunday</span><span className="text-foreground/80">11:00 – 22:00</span></div>
+              <div className="flex justify-between"><span>Lunch</span><span className="text-foreground/80">12:00 PM – 4:00 PM</span></div>
+              <div className="flex justify-between"><span>Dinner</span><span className="text-foreground/80">7:00 PM – 11:00 PM</span></div>
+              <div className="flex justify-between"><span>All Days</span><span className="text-foreground/80">Open Daily</span></div>
             </div>
           </div>
 
@@ -52,7 +54,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-muted-foreground text-xs">
-            © {new Date().getFullYear()} Royal Bites. All rights reserved.
+            © {new Date().getFullYear()} Zamindari Restaurant. All rights reserved.
           </p>
         </div>
       </div>
