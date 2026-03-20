@@ -64,14 +64,17 @@ export default function TestimonialsSection() {
                 transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
               }}
             >
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star
-                    key={j}
-                    size={16}
-                    className={j < r.rating ? "fill-gold text-gold" : "text-muted-foreground/30"}
-                  />
-                ))}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex gap-1">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <Star
+                      key={j}
+                      size={16}
+                      className={j < r.rating ? "fill-gold text-gold" : "text-muted-foreground/30"}
+                    />
+                  ))}
+                </div>
+                <span className="text-xs text-muted-foreground font-medium tracking-wide">{r.source}</span>
               </div>
               <p className="text-foreground/80 text-sm leading-relaxed mb-6 text-pretty italic">"{r.text}"</p>
               <div className="flex items-center gap-3">
