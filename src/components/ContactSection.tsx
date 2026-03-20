@@ -40,7 +40,7 @@ export default function ContactSection() {
               {[
                 { icon: MapPin, text: "Near Nowroji Rd, Port Officers Quarters, Maharani Peta, Visakhapatnam, Andhra Pradesh 530002" },
                 { icon: Phone, text: "099515 22111" },
-                { icon: Mail, text: "info@zamindarirestaurant.com" },
+                
                 { icon: Clock, text: "12:00 PM – 4:00 PM & 7:00 PM – 11:00 PM" },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-start gap-4">
