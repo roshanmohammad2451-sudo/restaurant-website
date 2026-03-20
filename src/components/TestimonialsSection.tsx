@@ -3,19 +3,34 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const reviews = [
   {
-    name: "Rajesh Kumar",
-    rating: 5,
-    text: "The Mutton Nalli Biryani is absolutely divine — the bone marrow pieces melt in your mouth. The ambience takes you back to the Zamindari era. A must-visit in Vizag!",
-  },
-  {
-    name: "Priya Reddy",
-    rating: 5,
-    text: "We celebrated my daughter's birthday here. The Talwar Chicken Kebab was the star of the evening! Great family-friendly atmosphere and attentive service.",
-  },
-  {
-    name: "Venkat Rao",
+    name: "Suxant",
     rating: 4,
-    text: "Authentic Andhra flavors that remind me of home cooking. The Gongura Kodi Kura and Bagara Rice combo is perfection. Will definitely bring my friends next time.",
+    text: "This restaurant is not very far from RK Beach. It looks like an old colonial property converted into a restaurant. The ambiance was great. The service was quick. Had ordered a Biryani and Allam Vellulli Chepa Fry. Both were outstanding. Overall a great eating experience, would surely recommend.",
+    source: "Zomato",
+  },
+  {
+    name: "Vani Sharma",
+    rating: 5,
+    text: "We ordered coriander pulao and baby potato in gunpowder. The food was amazing and the portion size was huge. Service was very fast and the staff was courteous. Would recommend 10/10!",
+    source: "Google",
+  },
+  {
+    name: "Kishore A",
+    rating: 5,
+    text: "Went first time with friends. Taste was very good and I liked the Kodi Pulusu — one of my favourites. Something different from regular restaurants as the menu here is unique. Old style cooking that made the difference. Cost is affordable too.",
+    source: "Google",
+  },
+  {
+    name: "Manish Verma",
+    rating: 5,
+    text: "It's an old bungalow converted into a restaurant. Mutton Biryani is good. The whole vibe feels royal and authentic.",
+    source: "Zomato",
+  },
+  {
+    name: "Praneesh Kumar Yadav K",
+    rating: 5,
+    text: "I totally loved the place, food and service. Everything was perfect — a must-visit when you're in Vizag!",
+    source: "Zomato",
   },
 ];
 
