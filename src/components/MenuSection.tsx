@@ -1,32 +1,46 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const categories = ["Starters", "Main Course", "Desserts", "Beverages"] as const;
+const categories = ["Starters", "Non-Veg Curries", "Veg", "Biryani & Rice", "Desserts & Drinks"] as const;
 
 const menuItems: Record<string, { name: string; desc: string; price: string }[]> = {
   Starters: [
-    { name: "Truffle Bruschetta", desc: "Grilled sourdough, heirloom tomatoes, black truffle oil, aged parmesan", price: "$16" },
-    { name: "Seared Scallops", desc: "Pan-seared diver scallops, cauliflower purée, crispy pancetta", price: "$22" },
-    { name: "Burrata Salad", desc: "Creamy burrata, roasted figs, prosciutto, honey-walnut drizzle", price: "$18" },
-    { name: "Lobster Bisque", desc: "Slow-simmered with brandy, crème fraîche, and chive oil", price: "$19" },
+    { name: "Talwar Chicken Kebab", desc: "Juicy chicken kebabs marinated in royal spices, grilled on a sword", price: "₹349" },
+    { name: "Andhra Kodi Roast", desc: "Fiery Andhra-style chicken roast with bold chili and curry leaf masala", price: "₹299" },
+    { name: "Vanjaram Fish Fry", desc: "Fresh seer fish marinated in turmeric and red chili, shallow fried crispy", price: "₹379" },
+    { name: "Bhimavaram Prawns Fry", desc: "Succulent prawns from Bhimavaram, fried with a spicy coastal masala", price: "₹399" },
+    { name: "Puttagodugulu Miriyala Vepudu", desc: "Mushrooms tossed in a peppery masala with aromatic spices", price: "₹249" },
   ],
-  "Main Course": [
-    { name: "Wagyu Ribeye", desc: "12oz A5 wagyu, bone marrow butter, truffle jus, seasonal vegetables", price: "$68" },
-    { name: "Pan-Roasted Salmon", desc: "Norwegian salmon, saffron risotto, charred broccolini, lemon beurre blanc", price: "$42" },
-    { name: "Duck Confit", desc: "Slow-braised duck leg, cherry compote, roasted root vegetables", price: "$38" },
-    { name: "Wild Mushroom Ravioli", desc: "Handmade pasta, porcini cream, shaved black truffle, sage butter", price: "$34" },
+  "Non-Veg Curries": [
+    { name: "Andhra Kodi Kura", desc: "Classic Andhra chicken curry cooked in a rich onion-tomato gravy", price: "₹329" },
+    { name: "Gongura Kodi Kura", desc: "Chicken simmered in tangy sorrel leaves — a true Andhra delicacy", price: "₹349" },
+    { name: "Natu Kodi Kura", desc: "Country chicken slow-cooked with traditional village-style spices", price: "₹399" },
+    { name: "Zamindari Mamsam", desc: "Signature mutton curry with a royal blend of aromatic spices", price: "₹449" },
+    { name: "Mutton Curry Boneless", desc: "Tender boneless mutton in a rich, deeply spiced gravy", price: "₹429" },
+    { name: "Royyala Pulusu", desc: "Prawns cooked in tangy tamarind gravy with Andhra spices", price: "₹379" },
+    { name: "Chepala Pulusu", desc: "Fish simmered in a sour and spicy tamarind-based curry", price: "₹359" },
   ],
-  Desserts: [
-    { name: "Chocolate Fondant", desc: "Valrhona dark chocolate, molten center, vanilla bean ice cream", price: "$16" },
-    { name: "Crème Brûlée", desc: "Tahitian vanilla custard, caramelized sugar, fresh berries", price: "$14" },
-    { name: "Tiramisu Royale", desc: "Espresso-soaked savoiardi, mascarpone mousse, cocoa dust", price: "$15" },
-    { name: "Seasonal Fruit Tart", desc: "Almond frangipane, pastry cream, glazed seasonal fruits", price: "$14" },
+  Veg: [
+    { name: "Gutti Vankaya Kura", desc: "Stuffed brinjal curry with peanut and sesame filling", price: "₹229" },
+    { name: "Paneer Tikka Masala", desc: "Grilled paneer cubes in a creamy tomato-based tikka sauce", price: "₹269" },
+    { name: "Gongura Pappu", desc: "Lentils cooked with tangy gongura leaves — Andhra comfort food", price: "₹199" },
+    { name: "Jeedipappu Batani Korma", desc: "Cashew and green peas cooked in a rich, mild korma gravy", price: "₹249" },
+    { name: "Tomato Pappu", desc: "Dal tempered with tomatoes, garlic, and Andhra-style seasoning", price: "₹179" },
   ],
-  Beverages: [
-    { name: "Royal Old Fashioned", desc: "Woodford Reserve bourbon, Demerara, Angostura, orange peel", price: "$18" },
-    { name: "Espresso Martini", desc: "Belvedere vodka, fresh espresso, Kahlúa, vanilla", price: "$17" },
-    { name: "Sommelier's Wine Pick", desc: "Ask about our rotating selection of fine wines by the glass", price: "$16" },
-    { name: "Artisanal Mocktail", desc: "Seasonal fruit shrub, botanical tonic, fresh herbs", price: "$12" },
+  "Biryani & Rice": [
+    { name: "Chicken Tikka Biryani", desc: "Fragrant basmati rice layered with chargrilled chicken tikka pieces", price: "₹349" },
+    { name: "Fish Biryani", desc: "Coastal-style biryani with fresh fish and aromatic spices", price: "₹379" },
+    { name: "Egg Biryani", desc: "Flavorful biryani with boiled eggs in a masala-rich rice preparation", price: "₹249" },
+    { name: "Kodi Pulav Rice", desc: "Spicy Andhra-style chicken pulao with whole spices", price: "₹299" },
+    { name: "Ulav Charu Egg Biryani", desc: "Unique biryani infused with horse gram broth and eggs", price: "₹279" },
+    { name: "Bhimavaram Mutton Pulao", desc: "Aromatic mutton pulao inspired by Bhimavaram's coastal flavors", price: "₹429" },
+    { name: "Mutton Nalli Biryani", desc: "Signature biryani with tender bone marrow pieces and saffron rice", price: "₹499" },
+    { name: "Bagara Rice", desc: "Fragrant rice tempered with whole spices, nuts, and herbs", price: "₹179" },
+  ],
+  "Desserts & Drinks": [
+    { name: "Apricot Delight", desc: "Signature dessert with apricot compote, cream, and crushed nuts", price: "₹199" },
+    { name: "Seeti Goli Soda", desc: "Classic Indian marble soda — fizzy, refreshing, and nostalgic", price: "₹49" },
+    { name: "Paya Shorba", desc: "Rich mutton trotters soup, slow-simmered with warming spices", price: "₹199" },
   ],
 };
 
@@ -45,7 +59,7 @@ export default function MenuSection() {
         >
           <p className="text-gold text-sm tracking-[0.25em] uppercase font-medium mb-4">Our Menu</p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
-            Curated for Every Palate
+            Authentic Andhra Flavors
           </h2>
         </div>
 

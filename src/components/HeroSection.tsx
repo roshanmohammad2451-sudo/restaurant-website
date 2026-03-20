@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img
         src={heroBg}
-        alt="Fine dining experience at Royal Bites"
+        alt="Andhra feast at Zamindari Restaurant"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
       />
@@ -16,19 +16,25 @@ export default function HeroSection() {
           className="text-gold text-sm md:text-base tracking-[0.3em] uppercase font-body font-medium mb-6 opacity-0 animate-fade-up"
           style={{ animationDelay: "0.2s" }}
         >
-          Est. 2018
+          Royal South Cuisine
         </p>
         <h1
           className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[0.95] mb-6 opacity-0 animate-fade-up text-balance"
           style={{ animationDelay: "0.4s" }}
         >
-          Royal Bites
+          Zamindari Restaurant
         </h1>
         <p
-          className="font-display italic text-lg sm:text-xl md:text-2xl text-gold-light mb-10 opacity-0 animate-fade-up"
+          className="font-display italic text-lg sm:text-xl md:text-2xl text-gold-light mb-4 opacity-0 animate-fade-up"
           style={{ animationDelay: "0.6s" }}
         >
-          Taste the Royal Experience
+          Experience Authentic Andhra Flavors with a Royal Touch
+        </p>
+        <p
+          className="text-foreground/70 text-sm sm:text-base mb-10 opacity-0 animate-fade-up"
+          style={{ animationDelay: "0.7s" }}
+        >
+          Famous for Talwar Chicken Kebab & Mutton Nalli Biryani
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up" style={{ animationDelay: "0.8s" }}>
           <a

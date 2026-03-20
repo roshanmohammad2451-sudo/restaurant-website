@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -24,7 +24,7 @@ export default function ContactSection() {
         >
           <p className="text-gold text-sm tracking-[0.25em] uppercase font-medium mb-4">Get in Touch</p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
-            We'd Love to Hear From You
+            Visit Us Today
           </h2>
         </div>
 
@@ -38,9 +38,10 @@ export default function ContactSection() {
           >
             <div className="space-y-6 mb-8">
               {[
-                { icon: MapPin, text: "42 Mayfair Lane, London, W1K 3AB" },
-                { icon: Phone, text: "+44 20 7946 0321" },
-                { icon: Mail, text: "hello@royalbites.co.uk" },
+                { icon: MapPin, text: "Near Nowroji Rd, Port Officers Quarters, Maharani Peta, Visakhapatnam, Andhra Pradesh 530002" },
+                { icon: Phone, text: "099515 22111" },
+                { icon: Mail, text: "info@zamindarirestaurant.com" },
+                { icon: Clock, text: "12:00 PM – 4:00 PM & 7:00 PM – 11:00 PM" },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-secondary flex items-center justify-center shrink-0">
@@ -53,8 +54,8 @@ export default function ContactSection() {
 
             <div className="rounded overflow-hidden shadow-lg shadow-black/20 border border-border/50">
               <iframe
-                title="Royal Bites location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.0!2d-0.1478!3d51.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMwJzI2LjYiTiAwwrAwOCc1Mi4xIlc!5e0!3m2!1sen!2suk!4v1"
+                title="Zamindari Restaurant location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5!2d83.3!3d17.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQzJzEyLjAiTiA4M8KwMTgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
                 width="100%"
                 height="250"
                 style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg) brightness(0.7) contrast(1.2)" }}
